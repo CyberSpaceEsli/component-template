@@ -6,30 +6,64 @@
             shortName:"A",
             iconStyle:"flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border text-[0.625rem] font-medium bg-white text-gray-400 border-gray-200 group-hover:border-indigo-600 group-hover:text-indigo-600 active:text-indigo-600",
             id:"#frame-atoms",
+            subItem:[
+                {
+                    subItemName:"Button",
+                    subItemId:"#button"
+                },
+                {
+                    subItemName:"Button2",
+                    subItemId:"#button2"
+                }
+            ],
         },
         {
             name:"Molecules",
             shortName:"M",
             iconStyle:"flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border text-[0.625rem] font-medium bg-white text-gray-400 border-gray-200 group-hover:border-indigo-600 group-hover:text-indigo-600 active:text-indigo-600",
             id:"#frame-molecules",
+            subItem:[
+                {
+                    subItemName:"InputForm",
+                    subItemId:"#inputForm"
+                }
+            ],
         },
         {
             name:"Organisms",
             shortName:"O",
             iconStyle:"flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border text-[0.625rem] font-medium bg-white text-gray-400 border-gray-200 group-hover:border-indigo-600 group-hover:text-indigo-600",
             id:"#frame-organisms",
+            subItem:[
+                {
+                    subItemName:"CTA",
+                    subItemId:"#cta"
+                }
+            ],
         },
         {
             name:"Templates",
             shortName:"T",
             iconStyle:"flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border text-[0.625rem] font-medium bg-white text-gray-400 border-gray-200 group-hover:border-indigo-600 group-hover:text-indigo-600",
             id:"#frame-templates",
+            subItem:[
+                {
+                    subItemName:"Template Landingpage",
+                    subItemId:"#template-landingpage"
+                }
+            ],
         },
         {
             name:"Pages",
             shortName:"P",
             iconStyle:"flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border text-[0.625rem] font-medium bg-white text-gray-400 border-gray-200 group-hover:border-indigo-600 group-hover:text-indigo-600",
             id:"#frame-pages",
+            subItem:[
+                {
+                    subItemName:"Landingpage",
+                    subItemId:"#landingpage"
+                }
+            ],
         },
     ]
 
@@ -41,11 +75,19 @@
             <ul role="list" class="-mx-2 space-y-1 lg:divide-y">
                 {#each navigation as nav}
                 <li>
-                    <!-- Current: "bg-gray-50 text-indigo-600", Default: "text-gray-700 hover:text-indigo-600 hover:bg-gray-50" -->
-                    <a href="{nav.id}" class="text-gray-700 hover:text-indigo-600 hover:bg-gray-50 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold">
-                        <span class={nav.iconStyle}>{nav.shortName}</span>
-                        <span class="truncate active:text-indigo-600">{nav.name}</span>
-                    </a>
+                    <div class="flex justify-between">
+                        <!-- Current: "bg-gray-50 text-indigo-600", Default: "text-gray-700 hover:text-indigo-600 hover:bg-gray-50" -->
+                        <a href="{nav.id}" class="text-gray-700 hover:text-indigo-600 hover:bg-gray-50 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold">
+                            <span class={nav.iconStyle}>{nav.shortName}</span>
+                            <span class="truncate active:text-indigo-600">{nav.name}</span>
+                        </a>
+
+                        <div class="flex items-center">
+                        <svg class="w-6 h-6 items-end" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+                        </svg>
+                        </div>
+                    </div>
                 </li>
                 {/each}
             </ul>
