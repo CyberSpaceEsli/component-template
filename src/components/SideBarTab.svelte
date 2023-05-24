@@ -4,32 +4,32 @@
         {
             name:"Atoms",
             shortName:"A",
-            iconStyle:"flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border text-[0.625rem] font-medium bg-white text-gray-400 border-gray-200 group-hover:border-indigo-600 group-hover:text-indigo-600",
-            path:"$lib/component-template/atoms",
+            iconStyle:"flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border text-[0.625rem] font-medium bg-white text-gray-400 border-gray-200 group-hover:border-indigo-600 group-hover:text-indigo-600 active:text-indigo-600",
+            id:"#frame-atoms",
         },
         {
             name:"Molecules",
             shortName:"M",
-            iconStyle:"flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border text-[0.625rem] font-medium bg-white text-gray-400 border-gray-200 group-hover:border-indigo-600 group-hover:text-indigo-600",
-            path:"$lib/component-template/molecules",
+            iconStyle:"flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border text-[0.625rem] font-medium bg-white text-gray-400 border-gray-200 group-hover:border-indigo-600 group-hover:text-indigo-600 active:text-indigo-600",
+            id:"#frame-molecules",
         },
         {
             name:"Organisms",
             shortName:"O",
             iconStyle:"flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border text-[0.625rem] font-medium bg-white text-gray-400 border-gray-200 group-hover:border-indigo-600 group-hover:text-indigo-600",
-            path:"$lib/component-template/organisms",
+            id:"#frame-organisms",
         },
         {
             name:"Templates",
             shortName:"T",
             iconStyle:"flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border text-[0.625rem] font-medium bg-white text-gray-400 border-gray-200 group-hover:border-indigo-600 group-hover:text-indigo-600",
-            path:"$lib/component-template/templates",
+            id:"#frame-templates",
         },
         {
             name:"Pages",
             shortName:"P",
             iconStyle:"flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border text-[0.625rem] font-medium bg-white text-gray-400 border-gray-200 group-hover:border-indigo-600 group-hover:text-indigo-600",
-            path:"$lib/component-template/pages",
+            id:"#frame-pages",
         },
     ]
 
@@ -42,9 +42,9 @@
                 {#each navigation as nav}
                 <li>
                     <!-- Current: "bg-gray-50 text-indigo-600", Default: "text-gray-700 hover:text-indigo-600 hover:bg-gray-50" -->
-                    <a href="#" class="text-gray-700 hover:text-indigo-600 hover:bg-gray-50 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold">
+                    <a href="{nav.id}" class="text-gray-700 hover:text-indigo-600 hover:bg-gray-50 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold">
                         <span class={nav.iconStyle}>{nav.shortName}</span>
-                        <span class="truncate">{nav.name}</span>
+                        <span class="truncate active:text-indigo-600">{nav.name}</span>
                     </a>
                 </li>
                 {/each}
@@ -75,12 +75,12 @@
             </ul>
         </li>
         <li class="hidden lg:block mt-auto">
-            <a href="#" class="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-700 hover:bg-gray-50 hover:text-indigo-600">
+            <button class="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-700 hover:bg-gray-50 hover:text-indigo-600">
                 <svg class="h-6 w-6 shrink-0 text-gray-400 group-hover:text-indigo-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M18.75 19.5l-7.5-7.5 7.5-7.5m-6 15L5.25 12l7.5-7.5" />
                 </svg>
                 Hide Side Bar
-            </a>
+            </button>
         </li>
     </ul>
 </nav>
