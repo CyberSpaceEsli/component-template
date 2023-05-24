@@ -1,25 +1,16 @@
 <script>
+    import { onMount } from 'svelte';
 
-    import Button from '$lib/component-template/atoms/Button.svelte' ;
-    import Button2 from '$lib/component-template/atoms/Button2.svelte' ;
+    let searchName ;
+    export let componentPath ;
 
-    export let searchName ;
+    searchName = componentPath.split("/").pop().split(".")[0];
 
-  const atom = [
-      {
-          "component": Button,
-          "componentName": "Button",
-      },
-      {
-          "component": Button2,
-          "componentName": "Button2",
-      }
-  ]
+    let component;
 
-    /*data[0].subitem.forEach((item) => {
-        console.log("subitems: " + item.name);
-    } );*/
-
+    onMount(async () => {
+        component = (await import(componentPath)).default;
+    });
 
 </script>
 
@@ -35,9 +26,8 @@
             </div>
             <div class="mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
                 <div class="py-4 h-auto">
-
                     <div class="flex justify-center my-4 py-4 border border-gray-300 rounded-lg">
-                        <slot></slot>
+                        <svelte:component this={component} buttonCaption={searchName}/>
                     </div>
                 </div>
             </div>
