@@ -1,4 +1,6 @@
 <script>
+    export let data;
+    console.log(data);
 
 import SideBar from "../../components/SideBar.svelte";
 import SearchField from "../../components/SearchField.svelte";
@@ -9,7 +11,7 @@ import ComponentContainer from "../../components/ComponentContainer.svelte";
 
 <div>
 
-    <SideBar />
+    <SideBar categories={data.categories}/>
 
     <div class="pl-16 lg:pl-72">
         <SearchField />

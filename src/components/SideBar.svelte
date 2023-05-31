@@ -1,7 +1,7 @@
 <script>
     import SideBarTab from "./SideBarTab.svelte";
 
-    let categories = ["test1","test2"];
+    export let categories = [];
 </script>
 
 <!-- Static sidebar for desktop -->

@@ -2,7 +2,7 @@ import { readdir } from 'node:fs/promises';
 
 export const load = async ({ params:{ category, component} } ) => {
     return {
-        files: await readFilesInDirectory(`./src/lib/component-template/${category}`)
+        categories: await readFilesInDirectory(`./src/lib/component-template`)
     }
 }
 
