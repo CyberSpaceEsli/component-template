@@ -1,11 +1,13 @@
 //import { readdir } from 'node:fs/promises';
 //import path from 'node:path';
 
-export const load = ({ params:{ category, component} }) => {
+export const load = ({ params:{ category, component}, users } ) => {
+    console.log(users);
     return {
         category, component
     }
 }
+
 
 /*const __filename = new URL(import.meta.url).pathname;
 const __dirname = path.dirname(__filename);
