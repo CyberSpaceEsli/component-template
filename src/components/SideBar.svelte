@@ -1,5 +1,7 @@
 <script>
     import SideBarTab from "./SideBarTab.svelte";
+
+    let categories = ["test1","test2"];
 </script>
 
 <!-- Static sidebar for desktop -->
@@ -12,6 +14,6 @@
             </svg>
             <p class="text-sm font-semibold text-gray-900 hidden lg:block pl-3">component-template</p>
         </div>
-        <SideBarTab />
+        <SideBarTab categories={categories} />
     </div>
 </div>
