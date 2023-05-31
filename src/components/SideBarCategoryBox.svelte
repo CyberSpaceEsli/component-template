@@ -36,7 +36,7 @@
                     {#each subItems as subItem}
                     <div>
                         <span class="text-indigo-600">-</span>
-                        {subItem.subItemName}
+                        {subItem}
                     </div>
                     {/each}
                 </a>
@@ -45,26 +45,6 @@
     </div>
     {/if}
 </li>
-
-
-<!--  <ul class="">
-    <li class="">
-        <a href="#" class="text-gray-700 hover:text-indigo-600 hover:bg-gray-50 rounded-md hover:underline">
-            <div>
-                <span class="text-indigo-600">-</span>
-                Button
-            </div>
-        </a>
-    </li>
-    <li class="">
-        <a href="#" class="text-gray-700 hover:text-indigo-600 hover:bg-gray-50 rounded-md hover:underline">
-            <div>
-                <span class="text-indigo-600">-</span>
-                Button2
-            </div>
-        </a>
-    </li>
-</ul>  -->
 
 
 

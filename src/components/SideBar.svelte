@@ -2,6 +2,7 @@
     import SideBarTab from "./SideBarTab.svelte";
 
     export let categories = [];
+    export let components = {};
 </script>
 
 <!-- Static sidebar for desktop -->
@@ -14,6 +15,6 @@
             </svg>
             <p class="text-sm font-semibold text-gray-900 hidden lg:block pl-3">component-template</p>
         </div>
-        <SideBarTab categories={categories} />
+        <SideBarTab categories={categories} components={components}/>
     </div>
 </div>

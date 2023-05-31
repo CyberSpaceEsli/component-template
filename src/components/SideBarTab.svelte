@@ -3,26 +3,27 @@
     import SideBarCategory from "./SideBarCategoryBox.svelte";
 
     export let categories = [];
+    export let components = {};
 
-    const navigation = categories.map(function (categories){
+    const navigation = categories.map(function (category){
 
         return {
-            name: categories,
+            name: category,
             shortName:"A",
             iconStyle:"flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border text-[0.625rem] font-medium bg-white text-gray-400 border-gray-200 group-hover:border-indigo-600 group-hover:text-indigo-600 active:text-indigo-600",
             id:"#frame-atoms",
-            subItem:[
-                {
-                    subItemName:"Button",
-                    subItemId:"#button"
-                },
-                {
-                    subItemName:"Button2",
-                    subItemId:"#button2"
-                }
-            ],
+            subItem:
+                getComponents(category)
+
         }
     })
+
+    function getComponents (category){
+        if (components[category] === undefined){
+            return [];
+        }
+        return components[category];
+    }
 
     /*const navigation = [
         {
