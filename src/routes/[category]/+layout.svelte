@@ -1,11 +1,24 @@
 <script>
-    export let data;
 
+import SideBar from "../../components/SideBar.svelte";
+import SearchField from "../../components/SearchField.svelte";
+import ComponentContainer from "../../components/ComponentContainer.svelte";
 </script>
 
 
 
 <div>
-    <b>{data.category}</b>
-    <slot></slot>
+
+    <SideBar />
+
+    <div class="pl-16 lg:pl-72">
+        <SearchField />
+        <main class="py-10">
+            <slot></slot>
+            <div class="px-4 sm:px-6 lg:px-8">
+                <ComponentContainer />
+            </div>
+        </main>
+    </div>
+
 </div>
