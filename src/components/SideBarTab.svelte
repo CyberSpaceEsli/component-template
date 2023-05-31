@@ -1,5 +1,7 @@
 <script>
 
+    import SideBarCategory from "./SideBarCategoryBox.svelte";
+
     const navigation = [
         {
             name:"Atoms",
@@ -67,12 +69,6 @@
         },
     ]
 
-let showComponents = false;
-
-    function toggleComponents() {
-        showComponents = !showComponents;
-    }
-
 </script>
 
 <nav class="flex flex-1 flex-col">
@@ -80,48 +76,11 @@ let showComponents = false;
         <li>
             <ul role="list" class="-mx-2 space-y-1 lg:divide-y">
                 {#each navigation as nav}
-                <li>
-                    <div class="flex justify-between">
-                        <!-- Current: "bg-gray-50 text-indigo-600", Default: "text-gray-700 hover:text-indigo-600 hover:bg-gray-50" -->
-                        <a href="{nav.id}" class="text-gray-700 hover:text-indigo-600 hover:bg-gray-50 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold">
-                            <span class={nav.iconStyle}>{nav.shortName}</span>
-                            <span class="truncate active:text-indigo-600">{nav.name}</span>
-                        </a>
-
-                        <button class="p-1 flex items-center hover:border hover:border-indigo-600 hover:rounded-xl" on:click={toggleComponents}>
-                            <svg id="plus-small" class="w-6 h-6 items-end text-gray-500" class:hidden={showComponents} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
-                            </svg>
-                            <svg id="min-small" class="w-6 h-6 items-end text-gray-500" class:hidden={!showComponents} fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
-                            </svg>
-                        </button>
-                    </div>
-                    <div id="component-box" class:hidden={!showComponents} class="flex flex-col w-fit pl-10">
-                        <ul class="">
-                            <li class="">
-                                <a href="#" class="text-gray-700 hover:text-indigo-600 hover:bg-gray-50 rounded-md hover:underline">
-                                <div>
-                                    <span class="text-indigo-600">-</span>
-                                    Button
-                                </div>
-                                </a>
-                            </li>
-                            <li class="">
-                                <a href="#" class="text-gray-700 hover:text-indigo-600 hover:bg-gray-50 rounded-md hover:underline">
-                                    <div>
-                                        <span class="text-indigo-600">-</span>
-                                        Button2
-                                    </div>
-                                </a>
-                            </li>
-
-                        </ul>
-                    </div>
-                </li>
+                    <SideBarCategory {nav} subItems={nav.subItem}/>
                 {/each}
             </ul>
         </li>
+
         <li>
             <div class="text-xs font-semibold leading-6 text-gray-400">Extras</div>
             <ul role="list" class="-mx-2 mt-2 space-y-1">
