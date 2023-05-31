@@ -6,6 +6,10 @@
     function toggleComponents() {
         showComponents = !showComponents;
     }
+
+    function generateLink (componentName) {
+        return `http://localhost:5173/${nav.name}/${componentName}`;
+    }
 </script>
 
 <li>
@@ -32,14 +36,14 @@
     <div id="component-box" class:hidden={!showComponents} class="flex flex-col w-fit pl-10">
         <ul class="">
             <li class="">
-                <a href="#" class="text-gray-700 hover:text-indigo-600 hover:bg-gray-50 rounded-md hover:underline">
                     {#each subItems as subItem}
                     <div>
                         <span class="text-indigo-600">-</span>
-                        {subItem}
+                        <a href={generateLink(subItem)} class="text-gray-700 hover:text-indigo-600 hover:bg-gray-50 rounded-md hover:underline">
+                            {subItem}
+                        </a>
                     </div>
                     {/each}
-                </a>
             </li>
         </ul>
     </div>
