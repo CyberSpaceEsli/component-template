@@ -8,7 +8,7 @@
 </script>
 
 <div>
-    <SideBar categories={data.categories}/>
+    <SideBar categories={data.categories} components={data.components}/>
 
     <div class="pl-16 lg:pl-72">
         <SearchField />
