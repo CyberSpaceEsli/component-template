@@ -4,10 +4,14 @@
     import ComponentContainer from "../../components/ComponentContainer.svelte";
 
     export let data;
+    // data enthält ein Objekt mit den Eigenschaften categoriers: ["atoms", ...] > Array und
+    // components: {atoms: ["Button","Button2"], molecules: ["InputForm"]} > Object
 
+    //[category] ist eine dynamische route, der Name der Route ändert sich
 </script>
 
 <div>
+    <!-- categories und components werden an SideBar als prop übergeben-->
     <SideBar categories={data.categories} components={data.components}/>
 
     <div class="pl-16 lg:pl-72">

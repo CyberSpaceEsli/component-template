@@ -15,6 +15,7 @@
             </svg>
             <p class="text-sm font-semibold text-gray-900 hidden lg:block pl-3">component-template</p>
         </div>
+        <!-- Die props werden weiter an SideBarTab überführt-->
         <SideBarTab categories={categories} components={components}/>
     </div>
 </div>

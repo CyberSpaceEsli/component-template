@@ -3,10 +3,12 @@
     export let subItems;
     let showComponents = false;
 
+    // toogelt den auf- und zuklapp Mechanismus der svgs 'plus-small' und 'min-small'
     function toggleComponents() {
         showComponents = !showComponents;
     }
 
+    // gerneriert relative url aus den categories und components
     function generateLink (componentName) {
         return `http://localhost:5173/${nav.name}/${componentName}`;
     }

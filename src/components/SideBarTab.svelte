@@ -1,20 +1,22 @@
 <script>
 
-    import SideBarCategory from "./SideBarCategoryBox.svelte";
+    import SideBarCategory from "./SideBarCategory.svelte";
 
     export let categories = [];
     export let components = {};
 
     const navigation = categories.map(function (category){
+    // jeder Eintrag im Array categories: [atoms, molecules, organisms, templates, pages] wird durch iteriert ausgegeben
 
+        // von jeder category wird ein Objekt erstellt, dass verschiedene Eigenschaften enthält
         return {
             name: category,
             shortName:"A",
             iconStyle:"flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border text-[0.625rem] font-medium bg-white text-gray-400 border-gray-200 group-hover:border-indigo-600 group-hover:text-indigo-600 active:text-indigo-600",
             id:"#frame-atoms",
             subItem:
+            // gibt das Array der components für die jeweilige category zurück
                 getComponents(category)
-
         }
     })
 
