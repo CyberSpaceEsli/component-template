@@ -1,6 +1,6 @@
 <script>
     import { onMount } from 'svelte';
-    import { beforeUpdate } from 'svelte';
+    import { afterUpdate } from 'svelte';
 
     export let componentPath ='';
 
@@ -16,8 +16,13 @@
     });
 
     //jedesmal bei Änderung componentPath
-    beforeUpdate(async () => {
-        component = (await import(componentPath)).default;
+    afterUpdate(async () => {
+
+        let newComponent = (await import(componentPath)).default;
+        //prevent infinite loop, only assign component on change
+        if (component !== newComponent) {
+            component = newComponent;
+        }
     });
 
 </script>

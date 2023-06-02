@@ -12,6 +12,7 @@
     $: componentPaths = getComponentPath(data.category, data.componentFiles);
 
     /**
+     * todo remove duplicated function and use import
      * '../lib/component-template/atoms/Button2.svelte'
      * @param search
      * @param componentPaths
@@ -33,11 +34,13 @@
     <SideBar categories={data.categories} components={data.components}/>
 
     <div class="pl-16 lg:pl-72">
+        {#if !data.component}
         <SearchField components={data.components}/>
+        {/if}
         <main class="py-10">
-            <slot></slot>
+
             <div class="px-4 sm:px-6 lg:px-8">
-                <ComponentContainer componentPaths={componentPaths}/>
+                <slot></slot>
             </div>
         </main>
     </div>

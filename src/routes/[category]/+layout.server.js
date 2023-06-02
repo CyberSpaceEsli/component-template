@@ -8,7 +8,8 @@ export const load = async ({ params:{ category, component} }) => {
         categories: await readFilesInDirectory(`./src/lib/component-template`),
         components: await readFilesGlob(`./src/lib/component-template/*/*.svelte`),
         componentFiles: await getSvelteFiles(`./src/lib/component-template/*/*.svelte`),
-        category
+        category,
+        component
     }
 }
 
