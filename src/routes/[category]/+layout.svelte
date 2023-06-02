@@ -8,6 +8,24 @@
     // components: {atoms: ["Button","Button2"], molecules: ["InputForm"]} > Object
 
     //[category] ist eine dynamische route, der Name der Route ändert sich
+
+    $: componentPaths = getComponentPath(data.category, data.componentFiles);
+
+    /**
+     * '../lib/component-template/atoms/Button2.svelte'
+     * @param search
+     * @param componentPaths
+     */
+    function getComponentPath(search, componentPaths){
+        return componentPaths.filter(function (value){
+
+            let path = `src/lib/component-template/${search}`
+
+            return value.startsWith(path);
+        }).map(function (value) {
+            return value.replace(/^src/, '..');
+        })
+    }
 </script>
 
 <div>
@@ -19,7 +37,7 @@
         <main class="py-10">
             <slot></slot>
             <div class="px-4 sm:px-6 lg:px-8">
-                <ComponentContainer />
+                <ComponentContainer componentPaths={componentPaths}/>
             </div>
         </main>
     </div>

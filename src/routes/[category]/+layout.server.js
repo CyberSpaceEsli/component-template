@@ -3,10 +3,12 @@ import { glob } from 'glob';
 
 // layout.server.js damit in der layout.svelte auf data zugegriffen werden kann und die props übergeben werden können
 // asynchrone Funktion gibt ein Objekt mit zwei Eigenschaften categories und components zurück
-export const load = async () => {
+export const load = async ({ params:{ category, component} }) => {
     return {
         categories: await readFilesInDirectory(`./src/lib/component-template`),
-        components: await readFilesGlob(`./src/lib/component-template/*/*.svelte`)
+        components: await readFilesGlob(`./src/lib/component-template/*/*.svelte`),
+        componentFiles: await getSvelteFiles(`./src/lib/component-template/*/*.svelte`),
+        category
     }
 }
 
@@ -20,15 +22,20 @@ async function readFilesInDirectory(directory) {
     }
 }
 
+async function getSvelteFiles(directory) {
+    let result = await glob(directory);
+
+    result.sort();
+    return result;
+}
+
 
 // der Pfad unter components wird der Funktion readFilesGlob übergeben
 // Funktion liest alle Svelte-Dateien der category Ordner `./src/lib/component-template/*/*.svelte` > directory aus
 // Der Pfad wird zudem zerstückelt mit js Funktionen
 async function readFilesGlob(directory) {
     try {
-        let result = await glob(directory);
-
-        result.sort();
+        let result = await getSvelteFiles(directory);
 
         let obj ={};
         result.forEach(function (path){
@@ -49,7 +56,6 @@ async function readFilesGlob(directory) {
             obj[parent].push(filename);
         })
 
-        console.log('components', obj);
         return obj;
 
     } catch (error) {

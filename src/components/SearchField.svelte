@@ -9,8 +9,6 @@
 
     function findComponents (searchText, components){
         searchText = searchText.toLowerCase();
-        console.log('searchText', searchText)
-        console.log('searchResults', searchResults)
         let result = [];
 
         Object.keys(components).forEach(function (key) {
