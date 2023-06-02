@@ -1,6 +1,7 @@
 <script>
 
     import {generateLink} from "../functions/link.js";
+    import ComponentLink from "./ComponentLink.svelte";
 
     export let components = {};
     let searchText = "";
@@ -49,10 +50,7 @@
             </svg>
             <input id="search-field" bind:value={searchText} class="block h-full w-full border-0 py-0 pl-8 pr-0 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm" placeholder="Search..." type="search" name="search">
             {#each searchResults as {key, componentName}}
-                <div>
-                    {key},
-                    {componentName}
-                </div>
+                <ComponentLink category={key} component={componentName}/>
             {/each}
         </form>
 

@@ -1,5 +1,6 @@
 <script>
     import {generateLink} from "../functions/link.js";
+    import ComponentLink from "./ComponentLink.svelte";
 
     export let nav;
     export let subItems;
@@ -39,9 +40,7 @@
                     {#each subItems as subItem}
                     <div>
                         <span class="text-indigo-600">-</span>
-                        <a href={generateLink(subItem, nav.name)} class="text-gray-700 hover:text-indigo-600 hover:bg-gray-50 rounded-md hover:underline">
-                            {subItem}
-                        </a>
+                        <ComponentLink component={subItem} category={nav.name}/>
                     </div>
                     {/each}
             </li>
