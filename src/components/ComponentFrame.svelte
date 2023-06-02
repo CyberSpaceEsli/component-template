@@ -1,14 +1,22 @@
 <script>
     import { onMount } from 'svelte';
+    import { beforeUpdate } from 'svelte';
 
-    let searchName ;
-    export let componentPath ;
+    export let componentPath ='';
 
-    searchName = componentPath.split("/").pop().split(".")[0];
+    //Name generiert aus der letzten Bezeichnung der route
+    $: searchName = componentPath.split("/").pop().split(".")[0];
 
-    let component;
+    let component = null;
 
+    //nur beim Initialien rendern der Komponente ausgeführt
     onMount(async () => {
+        //importiert die Komponenten
+        component = (await import(componentPath)).default;
+    });
+
+    //jedesmal bei Änderung componentPath
+    beforeUpdate(async () => {
         component = (await import(componentPath)).default;
     });
 

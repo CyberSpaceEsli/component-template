@@ -1,10 +1,9 @@
 <script>
 import ComponentFrame from "./ComponentFrame.svelte";
 
-let componentPaths = [
-    '../lib/component-template/atoms/Button.svelte',
-    '../lib/component-template/atoms/Button2.svelte'
-]
+//todo use route param category
+export let componentPaths = [];
+
 
 </script>
 
