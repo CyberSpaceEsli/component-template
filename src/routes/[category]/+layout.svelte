@@ -15,7 +15,7 @@
     <SideBar categories={data.categories} components={data.components}/>
 
     <div class="pl-16 lg:pl-72">
-        <SearchField />
+        <SearchField components={data.components}/>
         <main class="py-10">
             <slot></slot>
             <div class="px-4 sm:px-6 lg:px-8">

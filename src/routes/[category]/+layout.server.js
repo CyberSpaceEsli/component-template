@@ -49,6 +49,7 @@ async function readFilesGlob(directory) {
             obj[parent].push(filename);
         })
 
+        console.log('components', obj);
         return obj;
 
     } catch (error) {

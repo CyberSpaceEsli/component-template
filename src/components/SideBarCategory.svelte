@@ -1,4 +1,6 @@
 <script>
+    import {generateLink} from "../functions/link.js";
+
     export let nav;
     export let subItems;
     let showComponents = false;
@@ -8,10 +10,6 @@
         showComponents = !showComponents;
     }
 
-    // gerneriert relative url aus den categories und components
-    function generateLink (componentName) {
-        return `http://localhost:5173/${nav.name}/${componentName}`;
-    }
 </script>
 
 <li>
@@ -41,7 +39,7 @@
                     {#each subItems as subItem}
                     <div>
                         <span class="text-indigo-600">-</span>
-                        <a href={generateLink(subItem)} class="text-gray-700 hover:text-indigo-600 hover:bg-gray-50 rounded-md hover:underline">
+                        <a href={generateLink(subItem, nav.name)} class="text-gray-700 hover:text-indigo-600 hover:bg-gray-50 rounded-md hover:underline">
                             {subItem}
                         </a>
                     </div>
