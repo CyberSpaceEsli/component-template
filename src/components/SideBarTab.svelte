@@ -11,8 +11,8 @@
         // von jeder category wird ein Objekt erstellt, dass verschiedene Eigenschaften enthält
         return {
             name: category,
-            shortName:"A",
-            iconStyle:"flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border text-[0.625rem] font-medium bg-white text-gray-400 border-gray-200 group-hover:border-indigo-600 group-hover:text-indigo-600 active:text-indigo-600",
+            shortName:readCategoryLetter(category),
+            iconStyle:"flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border text-[0.625rem] font-medium bg-white text-gray-400 border-gray-200",
             id:"#frame-atoms",
             subItem:
             // gibt das Array der components für die jeweilige category zurück
@@ -25,6 +25,10 @@
             return [];
         }
         return components[category];
+    }
+
+    function readCategoryLetter (category) {
+       return category.split("")[0]
     }
 
 </script>

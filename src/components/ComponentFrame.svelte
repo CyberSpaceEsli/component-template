@@ -11,11 +11,11 @@
 
     //nur beim Initialien rendern der Komponente ausgeführt
     onMount(async () => {
-        //importiert die Komponenten
+        //importiert die einzelne Komponente
         component = (await import(componentPath)).default;
     });
 
-    //jedesmal bei Änderung componentPath
+    //Ausführung jedesmal bei Änderung componentPath
     afterUpdate(async () => {
 
         let newComponent = (await import(componentPath)).default;

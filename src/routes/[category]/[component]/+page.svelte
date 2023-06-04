@@ -8,6 +8,8 @@
         todo remove duplicated function and use import
      * '../lib/component-template/atoms/Button2.svelte'
      */
+    // Funktion, gibt ein Array mit allen Pfaden der categories/components zurück, wobei src mit .. ausgetauscht wird
+
     function getComponentPath(category, component, componentFiles){
         let paths = componentFiles.filter(function (value){
 

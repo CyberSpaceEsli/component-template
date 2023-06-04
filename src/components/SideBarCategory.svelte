@@ -1,9 +1,12 @@
 <script>
-    import {generateLink} from "../functions/link.js";
     import ComponentLink from "./ComponentLink.svelte";
+    import { page } from '$app/stores'
+    //console.log($page.url.pathname);
 
     export let nav;
     export let subItems;
+
+
     let showComponents = false;
 
     // toogelt den auf- und zuklapp Mechanismus der svgs 'plus-small' und 'min-small'
@@ -11,14 +14,20 @@
         showComponents = !showComponents;
     }
 
+    function activeLink() {
+        if ($page.url.pathname === `/${nav.name}`) {
+            return "text-indigo-600 rounded-md bg-gray-50";
+        }
+    }
+
 </script>
 
 <li>
-    <div class="flex justify-between">
+    <div class="flex justify-between w-full">
         <!-- Current: "bg-gray-50 text-indigo-600", Default: "text-gray-700 hover:text-indigo-600 hover:bg-gray-50" -->
-        <a href="/{nav.name}" class="text-gray-700 hover:text-indigo-600 hover:bg-gray-50 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold">
+        <a href="/{nav.name}" class="{activeLink()} w-full active:text-indigo-600 active:bg-gray-50 active:rounded-md hover:text-indigo-600 hover:bg-gray-50 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold">
             <span class={nav.iconStyle}>{nav.shortName}</span>
-            <span class="truncate active:text-indigo-600">{nav.name}</span>
+            <span class="truncate">{nav.name}</span>
         </a>
 
         <div class="h-fit mt-2">

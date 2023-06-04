@@ -1,6 +1,4 @@
 <script>
-
-    import {generateLink} from "../functions/link.js";
     import ComponentLink from "./ComponentLink.svelte";
 
     export let components = {};

@@ -17,6 +17,7 @@
      * @param search
      * @param componentPaths
      */
+    // Funktion, gibt ein Array mit allen Pfaden der categories zurück, wobei src mit .. ausgetauscht wird
     function getComponentPath(search, componentPaths){
         console.log('categoryPATH', search);
         return componentPaths.filter(function (value){
