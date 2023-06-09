@@ -4,6 +4,7 @@
 
     export let categories = [];
     export let components = {};
+    export let activeCategory = '';
 
     const navigation = categories.map(function (category){
     // jeder Eintrag im Array categories: [atoms, molecules, organisms, templates, pages] wird durch iteriert ausgegeben
@@ -30,7 +31,7 @@
     function readCategoryLetter (category) {
        return category.split("")[0]
     }
-
+    console.log("activeCategory", activeCategory);
 </script>
 
 <nav class="flex flex-1 flex-col">
@@ -38,7 +39,7 @@
         <li>
             <ul role="list" class="-mx-2 space-y-1 lg:divide-y">
                 {#each navigation as nav}
-                    <SideBarCategory {nav} subItems={nav.subItem}/>
+                    <SideBarCategory {nav} subItems={nav.subItem} activeCategory={activeCategory}/>
                 {/each}
             </ul>
         </li>

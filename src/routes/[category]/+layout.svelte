@@ -27,11 +27,12 @@
             return value.replace(/^src/, '..');
         })
     }
+    console.log("data.category", data.category);
 </script>
 
 <div>
     <!-- categories und components werden an SideBar als prop übergeben-->
-    <SideBar categories={data.categories} components={data.components}/>
+    <SideBar categories={data.categories} components={data.components} activeCategory={data.category}/>
 
     <div class="pl-16 lg:pl-72">
         {#if !data.component}

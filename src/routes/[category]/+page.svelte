@@ -32,4 +32,4 @@
 </script>
 
 
-<ComponentContainer componentPaths={componentPaths}/>
+<ComponentContainer componentPaths={componentPaths} activeCategory={data.category}/>

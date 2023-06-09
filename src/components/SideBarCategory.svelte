@@ -5,23 +5,27 @@
 
     export let nav;
     export let subItems;
+    export let activeCategory='';
 
 
     let showComponents = false;
+
+    $: setLink = activeLink(activeCategory,nav.name);
 
     // toogelt den auf- und zuklapp Mechanismus der svgs 'plus-small' und 'min-small'
     function toggleComponents() {
         showComponents = !showComponents;
     }
 
-    function activeLink() {
-        if ($page.url.pathname == `/${nav.name}`) {
+    function activeLink(activeCategory, navName) {
+        console.log("activeLink", activeCategory , navName);
+        if (activeCategory === nav.name) {
             return "text-indigo-600 rounded-md bg-gray-100";
         }
     }
 
-    console.log("$page.url.pathname", $page.url.pathname);
-    console.log("activeCategory", activeCategory);
+
+
 
 </script>
 
@@ -29,7 +33,7 @@
     <div class="flex justify-between align-center">
         <!-- Current: "bg-gray-50 text-indigo-600", Default: "text-gray-700 hover:text-indigo-600 hover:bg-gray-50" -->
         <div class="p-1 w-full">
-        <a href="/{nav.name}" class="{activeLink()} w-full active:text-indigo-600 active:bg-gray-100 active:rounded-md hover:text-indigo-600 hover:bg-gray-50 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold">
+        <a href="/{nav.name}" class="{setLink} w-full active:text-indigo-600 active:bg-gray-100 active:rounded-md hover:text-indigo-600 hover:bg-gray-50 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold">
             <span class={nav.iconStyle}>{nav.shortName}</span>
             <span class="truncate">{nav.name}</span>
         </a>
