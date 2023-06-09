@@ -15,20 +15,25 @@
     }
 
     function activeLink() {
-        if ($page.url.pathname === `/${nav.name}`) {
-            return "text-indigo-600 rounded-md bg-gray-50";
+        if ($page.url.pathname == `/${nav.name}`) {
+            return "text-indigo-600 rounded-md bg-gray-100";
         }
     }
+
+    console.log("$page.url.pathname", $page.url.pathname);
+    console.log("activeCategory", activeCategory);
 
 </script>
 
 <li>
-    <div class="flex justify-between w-full">
+    <div class="flex justify-between align-center">
         <!-- Current: "bg-gray-50 text-indigo-600", Default: "text-gray-700 hover:text-indigo-600 hover:bg-gray-50" -->
-        <a href="/{nav.name}" class="{activeLink()} w-full active:text-indigo-600 active:bg-gray-50 active:rounded-md hover:text-indigo-600 hover:bg-gray-50 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold">
+        <div class="p-1 w-full">
+        <a href="/{nav.name}" class="{activeLink()} w-full active:text-indigo-600 active:bg-gray-100 active:rounded-md hover:text-indigo-600 hover:bg-gray-50 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold">
             <span class={nav.iconStyle}>{nav.shortName}</span>
             <span class="truncate">{nav.name}</span>
         </a>
+        </div>
 
         <div class="h-fit mt-2">
             <button class="hover:border hover:border-indigo-600 hover:rounded-md" on:click={toggleComponents}>
@@ -43,7 +48,7 @@
     </div>
 
     {#if showComponents}
-    <div id="component-box" class:hidden={!showComponents} class="flex flex-col w-fit pl-10">
+    <div id="component-box" class:hidden={!showComponents} class="flex flex-col w-full pl-10">
         <ul class="">
             <li class="">
                     {#each subItems as subItem}
