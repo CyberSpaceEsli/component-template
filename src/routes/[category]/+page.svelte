@@ -1,6 +1,4 @@
 <script>
-    import SideBar from "../../components/SideBar.svelte";
-    import SearchField from "../../components/SearchField.svelte";
     import ComponentContainer from "../../components/ComponentContainer.svelte";
 
     export let data;

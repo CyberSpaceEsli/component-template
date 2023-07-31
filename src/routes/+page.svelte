@@ -4,16 +4,17 @@
     import SearchField from "../components/SearchField.svelte";
 </script>
 
-    <SideBar />
+<SideBar />
 
-    <div class="pl-16 lg:pl-72">
+<div class="pl-16 lg:pl-72">
 
-        <SearchField />
+    <main class="py-10">
+        <div class="px-4 sm:px-6 lg:px-8">
+            <ComponentContainer />
+        </div>
+    </main>
+</div>
 
-        <main class="py-10">
-            <div class="px-4 sm:px-6 lg:px-8">
-                <ComponentContainer />
-            </div>
-        </main>
-    </div>
+
+
 

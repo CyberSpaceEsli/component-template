@@ -32,7 +32,7 @@
 
 <div>
     <!-- categories und components werden an SideBar als prop übergeben-->
-    <SideBar categories={data.categories} components={data.components} activeCategory={data.category}/>
+    <SideBar categories={data.categories} components={data.components} activeCategory={data.category} activeComponent={data.component}/>
 
     <div class="pl-16 lg:pl-72">
         {#if !data.component}
@@ -44,5 +44,5 @@
                 <slot></slot>
             </div>
         </main>
-    </div>
+   </div>
 </div>

@@ -6,6 +6,7 @@
     export let nav;
     export let subItems;
     export let activeCategory='';
+    export let activeComponent='';
 
 
     let showComponents = false;
@@ -17,15 +18,13 @@
         showComponents = !showComponents;
     }
 
+    // shows selected category with defined style
     function activeLink(activeCategory, navName) {
         console.log("activeLink", activeCategory , navName);
         if (activeCategory === nav.name) {
             return "text-indigo-600 rounded-md bg-gray-100";
         }
     }
-
-
-
 
 </script>
 
@@ -58,7 +57,7 @@
                     {#each subItems as subItem}
                     <div>
                         <span class="text-indigo-600">-</span>
-                        <ComponentLink component={subItem} category={nav.name}/>
+                        <ComponentLink component={subItem} category={nav.name} activeComponent={activeComponent}/>
                     </div>
                     {/each}
             </li>
