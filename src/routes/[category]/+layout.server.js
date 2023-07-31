@@ -23,12 +23,16 @@ async function readFilesInDirectory(directory) {
     }
 }
 
+// getSvelteFiles nimmt Verzeichnis entgegen ./src/lib/component-template/*/*.svelte
+// liest die Pfade der einzelnen Svelte Dateien aus
+// sort soritert die Pfade alphabetisch
 async function getSvelteFiles(directory) {
     let result = await glob(directory);
 
     result.sort();
     return result;
 }
+
 
 
 // der Pfad unter components wird der Funktion readFilesGlob übergeben
