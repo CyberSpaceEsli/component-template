@@ -1,9 +1,8 @@
 <script>
     import InterfaceDocumentation from "../../components/InterfaceDocumentation.svelte";
     import SideBar from "../../components/SideBar.svelte";
-
-    console.log("I was here")
 </script>
+
 <SideBar />
 
 <div class="pl-16 lg:pl-72">

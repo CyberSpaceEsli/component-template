@@ -36,3 +36,60 @@ npm run build
 You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+
+***
+# UI-Component-Template
+
+## ☝️ What is a component-template?
+
+The [`component-template`] delivers a *practical* and *structured* process of how to deal with your **components** in your **frontend**. 
+
+### ⚠️ Alert:
+* Until now this component-template is only compatible with the technologies **Svelte** and **Tailwind CSS**.
+
+
+* It needs to follow the fix structure of the **Metholody Atomic Design**.
+
+## 👍 Why use the component-template?
+* Maximaze the reuse of your established components and write less code
+
+
+* Shared language and process with components because of fixed rules of the categories for components
+
+
+* Provides a modern and manageable frontend to show the visual side of your components
+
+
+* Faster component tracking with the implemented search tool in the frontend
+
+
+## 🔧 How to install the component-template?
+
+Download the project **component-template** from the [`npm Registry`]. (link?)
+
+```
+$ npm i component-template
+```
+
+
+Beneath the *lib* folder make a folder component-template that contains further folders with the Atomic Design categories.
+
+```
+* lib
+** component-template
+*** atoms
+*** molecules
+*** organism
+*** templates
+*** pages
+```
+
+After that insert your build **components** into the *fitting* category of the Atomic Design Methodology.
+
+## 📌 How to use the component-template?
+
+1 Organize the components of a Project into the categories atoms, molekules, organisms, templates and pages
+
+2 Create folders alongside the structure of atomic design
+
+3 Write youre Components content into the correct category
