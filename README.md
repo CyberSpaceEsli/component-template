@@ -72,7 +72,7 @@ $ npm i component-template
 ```
 
 
-Beneath the *lib* folder make a folder component-template that contains further folders with the Atomic Design categories.
+Beneath the *lib* folder make a folder **component-template** that contains further folders with the Atomic Design categories. This listed structure is shown below.
 
 ```
 * lib
@@ -88,8 +88,11 @@ After that insert your build **components** into the *fitting* category of the A
 
 ## 📌 How to use the component-template?
 
-1 Organize the components of a Project into the categories atoms, molekules, organisms, templates and pages
+1 Each component lies in its own svelte file
 
-2 Create folders alongside the structure of atomic design
+2 choose suitable Naming of your components 
 
-3 Write youre Components content into the correct category
+3 Reuse your components with the import statement
+
+4 Pass props or use each iterations for the usage of dynamic data with your components
+ 
