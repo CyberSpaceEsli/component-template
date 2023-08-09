@@ -86,6 +86,13 @@ Beneath the *lib* folder make a folder **component-template** that contains furt
 
 After that insert your build **components** into the *fitting* category of the Atomic Design Methodology.
 
+## 🔌 Which configurations for the component-template are needed?
+
+A import the route to the components : (import to all infos under node_modules).
+
+B open localhost/component-template/ for access to the Interface of the component-template.
+
+
 ## 📌 How to use the component-template?
 
 1 Each component lies in its own svelte file
