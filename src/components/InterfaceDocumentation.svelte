@@ -45,7 +45,7 @@
          <h2 class="text-indigo-600 text-xl font-bold">Why use the component-template?</h2>
       </div>
       <div class="ml-3">
-         <div class="mt-2 text-sm text-gray-700 py-2 px-5">
+         <div class="mt-2 text-gray-900 py-2 px-5">
             <ul role="list" class="list-disc space-y-1 pl-5">
                <li>Maximaze the reuse of your established components and write less code</li>
                <li>Shared language and process with components because of fixed rules of the categories for components</li>
@@ -101,11 +101,11 @@
          <h2 class="text-indigo-600 text-xl font-bold">How to use the component-template?</h2>
       </div>
       <div class="ml-3">
-         <div class="mt-2 text-sm text-gray-700 py-2 px-5">
+         <div class="mt-2 text-gray-900 py-2 px-5">
                <p> <b>1</b> Each component lies in its own svelte file</p>
-               <p> <b>2</b> Choose suitable Naming of your components</p>
-               <p> <b>3</b> Reuse your components with the import statement</p>
-               <p> <b>4</b> Pass props or use each iterations for the usage of dynamic data with your components</p>
+               <p class="pt-2"> <b>2</b> Choose suitable Naming of your components</p>
+               <p class="pt-2"> <b>3</b> Reuse your components with the import statement</p>
+               <p class="pt-2"> <b>4</b> Pass props or use each iterations for the usage of dynamic data with your components</p>
          </div>
       </div>
 
@@ -116,9 +116,8 @@
          <h2 class="text-indigo-600 text-xl font-bold">How can the component-template help different roles?</h2>
       </div>
       <div class="mt-2 py-2 px-5 text-gray-900">
-         <p><b>Design:</b> If a custom component needs to be made the previous design can be used as basis.</p>
-         <p>Content Creation: When creating new content it can be better adapted to the scale of the component. </p>
-         <p>Sales: </p>
+         <p><b>Design:</b> If a custom component needs to be made the previous design can be used as basis. In the future, Tailwind CSS classes could be captured and displayed in the interface, allowing changes to be made directly within it. </p>
+         <p class="pt-2"><b>Content Creation:</b> When creating new content it can be better scaled and estimated due to the size of components. In addition, there could be an input block where they can paste the generated content for the component. </p>
       </div>
 
    </div>
