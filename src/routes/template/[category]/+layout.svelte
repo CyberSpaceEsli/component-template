@@ -1,5 +1,7 @@
 <script>
-    import ComponentContainer from "../../components/ComponentContainer.svelte";
+    import SideBar from "../../../components/SideBar.svelte";
+    import SearchField from "../../../components/SearchField.svelte";
+    import ComponentContainer from "../../../components/ComponentContainer.svelte";
 
     export let data;
     // data enthält ein Objekt mit den Eigenschaften categoriers: ["atoms", ...] > Array und
@@ -15,9 +17,7 @@
      * @param search
      * @param componentPaths
      */
-    // Funktion, gibt ein Array mit allen Pfaden der categories zurück, wobei src mit .. ausgetauscht wird
     function getComponentPath(search, componentPaths){
-        console.log('categoryPATH', search);
         return componentPaths.filter(function (value){
 
             let path = `src/lib/component-template/${search}`
@@ -27,7 +27,22 @@
             return value.replace(/^src/, '..');
         })
     }
+    console.log("data.category", data.category);
 </script>
 
+<div>
+    <!-- categories und components werden an SideBar als prop übergeben-->
+    <SideBar categories={data.categories} components={data.components} activeCategory={data.category} activeComponent={data.component}/>
 
-<ComponentContainer componentPaths={componentPaths} activeCategory={data.category}/>
+    <div class="pl-16 lg:pl-72">
+        {#if !data.component}
+        <SearchField components={data.components}/>
+        {/if}
+        <main class="py-10">
+
+            <div class="px-4 sm:px-6 lg:px-8">
+                <slot></slot>
+            </div>
+        </main>
+   </div>
+</div>

@@ -32,7 +32,7 @@
     <div class="flex justify-between align-center">
         <!-- Current: "bg-gray-50 text-indigo-600", Default: "text-gray-700 hover:text-indigo-600 hover:bg-gray-50" -->
         <div class="p-1 w-full">
-        <a href="/{nav.name}" class="{setLink} w-full active:text-indigo-600 active:bg-gray-100 active:rounded-md hover:text-indigo-600 hover:bg-gray-50 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold">
+        <a href="/template/{nav.name}" class="{setLink} w-full active:text-indigo-600 active:bg-gray-100 active:rounded-md hover:text-indigo-600 hover:bg-gray-50 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold">
             <span class={nav.iconStyle}>{nav.shortName}</span>
             <span class="truncate">{nav.name}</span>
         </a>

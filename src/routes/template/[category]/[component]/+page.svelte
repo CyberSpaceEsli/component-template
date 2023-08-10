@@ -1,5 +1,5 @@
 <script>
-    import ComponentFrame from "../../../components/ComponentFrame.svelte";
+    import ComponentFrame from "../../../../components/ComponentFrame.svelte";
 
     export let data;
 
