@@ -90,7 +90,8 @@
          </div>
       </div>
       <div class="mt-2 py-2 px-5 text-gray-900">
-         <p>After that insert your build components into the fitting category of the Atomic Design Methodology. </p>
+         <p class="mb-2">Initial these folders are delivered. Still a quick check is needed. </p>
+         <p>> In the <i>atoms</i> and <i>molecules</i> folder you can find example components. Follow this example and paste your <b>own components</b> into the <i>fitting</i> category of the <b>Atomic Design Methodology.</b></p>
       </div>
 
       <div class="mt-10 flex space-x-2 items-center">
@@ -103,7 +104,7 @@
       </div>
       <div class="ml-3">
          <div class="mt-2 text-gray-900 py-2 px-5">
-            Insert /template after your localhost and see the Interface of the component-template
+            Insert <code>/template</code> after your localhost address and see the Interface of the component-template
          </div>
       </div>
 

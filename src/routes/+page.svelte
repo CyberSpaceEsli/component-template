@@ -5,5 +5,5 @@
         </svg>
         <h1 class="font-semibold text-2xl text-indigo-600">Welcome to the UI-Component-Template</h1>
     </div>
-    <h2 class="mt-5">Add /template or another category to see your UI components and the navigation.</h2>
+    <h2 class="mt-5">With /template you can open the component-template frontend and see your UI components and the navigation bar.</h2>
 </div>
