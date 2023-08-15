@@ -68,7 +68,7 @@ The [`component-template`] delivers a *practical* and *structured* process of ho
 Download the project **component-template** from the [`npm Registry`]. (link?)
 
 ```
-$ npm i component-template
+$ npm install component-template
 ```
 
 
@@ -86,20 +86,22 @@ Beneath the *lib* folder make a folder **component-template** that contains furt
 
 After that insert your build **components** into the *fitting* category of the Atomic Design Methodology.
 
+Side Note:
+- If u want to show dynamic content or no content then use **caption** that will fill the component with the Name of the component.
+
 ## 🔌 Which configurations for the component-template are needed?
 
-A import the route to the components : (import to all infos under node_modules).
 
-B open localhost/component-template/ for access to the Interface of the component-template.
+* Open localhost:.../template/ for access to the Interface of the component-template.
 
 
 ## 📌 How to use the component-template?
 
 1 Each component lies in its own svelte file
 
-2 choose suitable Naming of your components 
+2 Choose suitable Naming of your components 
 
-3 Reuse your components with the import statement
+3 Reuse your components with import
 
-4 Pass props or use each iterations for the usage of dynamic data with your components
+4 Pass props or use *each iterations* for the usage of dynamic data with your components
  

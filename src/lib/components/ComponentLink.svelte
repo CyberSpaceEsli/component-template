@@ -4,7 +4,6 @@ import { generateLink } from "./functions/link.js";
 export let component;
 export let category;
 export let activeComponent='';
-console.log(component);
 
 $: setLink = activeLink(activeComponent,component);
 

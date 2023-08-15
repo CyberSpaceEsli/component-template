@@ -14,7 +14,6 @@
         //importiert die einzelne Komponente
         component = (await import(componentPath)).default;
     });
-    console.log("Hey",componentPath)
 
     //Ausführung jedesmal bei Änderung componentPath
     afterUpdate(async () => {
@@ -25,7 +24,6 @@
             component = newComponent;
         }
     });
-
 </script>
 
         <div class="py-6">
@@ -41,7 +39,7 @@
             <div class="mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
                 <div class="py-4 h-auto">
                     <div class="flex justify-center my-4 py-4 border border-gray-300 rounded-lg">
-                        <svelte:component this={component} buttonCaption={searchName}/>
+                        <svelte:component this={component} caption={searchName}/>
                     </div>
                 </div>
             </div>
