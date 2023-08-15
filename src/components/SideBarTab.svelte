@@ -1,5 +1,4 @@
 <script>
-
     import SideBarCategory from "./SideBarCategory.svelte";
 
     export let categories = [];

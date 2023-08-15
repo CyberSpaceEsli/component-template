@@ -27,7 +27,7 @@
             return value.replace(/^src/, '..');
         })
     }
-    console.log("data.category", data.category);
+    //console.log("data.category", data.category);
 </script>
 
 <div>

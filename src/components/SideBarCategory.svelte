@@ -1,13 +1,10 @@
 <script>
     import ComponentLink from "./ComponentLink.svelte";
-    import { page } from '$app/stores'
-    //console.log($page.url.pathname);
 
     export let nav;
     export let subItems;
     export let activeCategory='';
     export let activeComponent='';
-
 
     let showComponents = false;
 
@@ -20,7 +17,7 @@
 
     // shows selected category with defined style
     function activeLink(activeCategory, navName) {
-        console.log("activeLink", activeCategory , navName);
+        //console.log("activeLink", activeCategory , navName);
         if (activeCategory === nav.name) {
             return "text-indigo-600 rounded-md bg-gray-100";
         }

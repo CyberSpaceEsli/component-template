@@ -1,5 +1,5 @@
 <script>
-import {generateLink} from "../functions/link.js";
+import { generateLink } from "./functions/link.js";
 
 export let component;
 export let category;
@@ -8,7 +8,7 @@ export let activeComponent='';
 $: setLink = activeLink(activeComponent,component);
 
 function activeLink(activeComponent, subItem) {
-    console.log("activeLink", activeComponent);
+    //console.log("activeLink", activeComponent);
     if (activeComponent === component) {
         return "text-indigo-600 underline";
     }

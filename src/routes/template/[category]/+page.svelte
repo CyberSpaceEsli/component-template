@@ -17,7 +17,7 @@
      */
     // Funktion, gibt ein Array mit allen Pfaden der categories zurück, wobei src mit .. ausgetauscht wird
     function getComponentPath(search, componentPaths){
-        console.log('categoryPATH', search);
+        //console.log('categoryPATH', search);
         return componentPaths.filter(function (value){
 
             let path = `src/lib/component-template/${search}`
