@@ -14,6 +14,7 @@
         //importiert die einzelne Komponente
         component = (await import(componentPath)).default;
     });
+    console.log("Hey",componentPath)
 
     //Ausführung jedesmal bei Änderung componentPath
     afterUpdate(async () => {

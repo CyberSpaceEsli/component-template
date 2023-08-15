@@ -63,7 +63,7 @@
          <h2 class="text-indigo-600 text-xl font-bold">How to install the component-template?</h2>
       </div>
       <div class="mt-2 py-2 px-5 text-gray-900">
-         <p>Download the project component-template from the <a href="/" class="text-indigo-700 hover:underline">[npm Registry]</a>. (link?)</p>
+         <p>Download the project component-template from the <a href="/static" class="text-indigo-700 hover:underline">[npm Registry]</a>. (link?)</p>
       </div>
       <div class="mt-2 rounded-md bg-gray-50 w-max p-5">
             <div class="ml-3">

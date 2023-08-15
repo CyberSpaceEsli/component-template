@@ -1,7 +1,7 @@
 <script>
-    import SideBar from "../../../components/SideBar.svelte";
-    import SearchField from "../../../components/SearchField.svelte";
-    import ComponentContainer from "../../../components/ComponentContainer.svelte";
+    import SideBar from "../../../lib/components/SideBar.svelte";
+    import SearchField from "../../../lib/components/SearchField.svelte";
+    import ComponentContainer from "../../../lib/components/ComponentContainer.svelte";
 
     export let data;
     // data enthält ein Objekt mit den Eigenschaften categoriers: ["atoms", ...] > Array und
@@ -27,7 +27,8 @@
             return value.replace(/^src/, '..');
         })
     }
-    //console.log("data.category", data.category);
+    console.log("data.category", data.category);
+    console.log("data", data);
 </script>
 
 <div>

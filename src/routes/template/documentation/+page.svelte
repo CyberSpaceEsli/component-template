@@ -1,6 +1,6 @@
 <script>
-    import InterfaceDocumentation from "../../../components/InterfaceDocumentation.svelte";
-    import SideBar from "../../../components/SideBar.svelte";
+    import InterfaceDocumentation from "../../../lib/components/InterfaceDocumentation.svelte";
+    import SideBar from "../../../lib/components/SideBar.svelte";
 </script>
 
 <SideBar />

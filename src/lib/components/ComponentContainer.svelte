@@ -3,8 +3,6 @@ import ComponentFrame from "./ComponentFrame.svelte";
 
 //todo use route param category
 export let componentPaths = [];
-
-
 </script>
 
     <div class="flex flex-col">

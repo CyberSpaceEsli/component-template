@@ -1,6 +1,6 @@
 <script>
-    import SideBar from '../../components/SideBar.svelte'
-    import ComponentContainer from "../../components/ComponentContainer.svelte";
+    import SideBar from '../../lib/components/SideBar.svelte'
+    import ComponentContainer from "../../lib/components/ComponentContainer.svelte";
 </script>
 
 <SideBar />

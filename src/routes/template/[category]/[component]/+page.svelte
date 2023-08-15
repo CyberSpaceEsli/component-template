@@ -1,5 +1,5 @@
 <script>
-    import ComponentFrame from "../../../../components/ComponentFrame.svelte";
+    import ComponentFrame from "../../../../lib/components/ComponentFrame.svelte";
 
     export let data;
 
@@ -16,7 +16,7 @@
             let path = `src/lib/component-template/${category}/${component}.svelte`;
             return value === path;
         }).map(function (value) {
-            return value.replace(/^src/, '..');
+            return value.replace(/^src\/lib/, '..');
         });
 
         return paths[0];

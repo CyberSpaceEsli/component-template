@@ -1,5 +1,5 @@
 <script>
-    import ComponentContainer from "../../../components/ComponentContainer.svelte";
+    import ComponentContainer from "../../../lib/components/ComponentContainer.svelte";
 
     export let data;
     // data enthält ein Objekt mit den Eigenschaften categoriers: ["atoms", ...] > Array und
@@ -8,7 +8,6 @@
     //[category] ist eine dynamische route, der Name der Route ändert sich
 
     $: componentPaths = getComponentPath(data.category, data.componentFiles);
-
     /**
      * todo remove duplicated function and use import
      * '../lib/component-template/atoms/Button2.svelte'
