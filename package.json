@@ -1,7 +1,7 @@
 {
-	"name": "component-template",
-	"version": "0.0.1",
-	"private": true,
+	"name": "@cyberesli/component-template",
+	"license": "MIT",
+	"version": "0.0.2",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
@@ -10,17 +10,17 @@
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
 	},
-	"exports": {
-		".": {
-			"svelte": "./dist/index.js"
-		}
-	},
 	"files": [
-		"dist"
+		"dist",
+		"svelte.config.js",
+		"tailwind.config.js",
+		"vite.config.ts",
+		"postcss.config.js",
+		"tsconfig.json"
 	],
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^2.0.0",
-		"@sveltejs/kit": "^1.5.0",
+		"@sveltejs/kit": "^1.22.6",
 		"autoprefixer": "^10.4.14",
 		"postcss": "^8.4.23",
 		"svelte": "^3.54.0",
