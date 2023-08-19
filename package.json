@@ -5,19 +5,14 @@
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
-		"install": "echo $INIT_CWD",
+		"postinstall": "cp -R lib/component-template ../../../../src/lib",
 		"preview": "vite preview",
 		"package": "svelte-kit sync && svelte-package && publint",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
 	},
 	"files": [
-		"dist",
-		"svelte.config.js",
-		"tailwind.config.js",
-		"vite.config.ts",
-		"postcss.config.js",
-		"tsconfig.json"
+		"dist"
 	],
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^2.0.0",
