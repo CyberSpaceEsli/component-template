@@ -5,10 +5,10 @@
 The [`component-template`] delivers a *practical* and *structured* process of how to deal with your **components** in your **frontend**. 
 
 ### ⚠️ Alert:
-* Until now this component-template is only compatible with the technologies **Svelte** and **Tailwind CSS**.
+* Until now this component-template is only compatible with the technologies **SvelteKit** and **Tailwind CSS**.
 
 
-* It needs to follow the fix structure of the **Metholody Atomic Design**.
+* It needs to follow the fix structure of the **Methodology Atomic Design**.
 
 ## 👍 Why use the component-template?
 * Maximaze the reuse of your established components and write less code
@@ -27,12 +27,42 @@ The [`component-template`] delivers a *practical* and *structured* process of ho
 
 Download the project **component-template** from the [`npm Registry`] > https://www.npmjs.com/package/@cyberesli/component-template. 
 
+**First Step:**
 ```
 $ npm i @cyberesli/component-template
 ```
 
+**Second Step:**
+```
+$ cd node_modules
+$ cd @cyberesli
+$ cd component-template
+$ cd dist
+```
 
-Beneath the *lib* folder make a folder **component-template** that contains further folders with the Atomic Design categories. This listed structure is shown below.
+**Third Step:**
+```
+$ npm update
+```
+
+**Fourth Step:**
+```
+$ npm run-script setup
+```
+
+**Fifth Step:**
+```
+go back to root 
+$ npm run dev
+```
+
+**Last Step:**
+
+ open the component-template with [`/template`] after the domain in the browser e.g. `localhost:5173/template`
+
+
+
+In the `lib/component-template` folder add further folders with the Atomic Design categories. This listed structure is shown below.
 
 ```
 * lib
@@ -44,28 +74,23 @@ Beneath the *lib* folder make a folder **component-template** that contains furt
 *** pages
 ```
 
-Initial these folders are delivered. Still a quick check is needed. 
-
 In the *atoms* and *molecules* folder you can find example components. Follow this example and paste your **own components** into the *fitting* category of the **Atomic Design Methodology**.
 
 Side Note:
 - If u want to show dynamic content or no content then use **caption** that will fill the component with the Name of the component.
 
-## 🔌 Which configurations for the component-template are needed?
+## 📌 What to consider using the component-template?
+
+* Each component classified to Atomic Design lies in its own `.svelte` file.
 
 
-* Open localhost:.../template/ for access to the Interface of the component-template.
+* Choose suitable Naming of your components, so you will always know where they stand for. 
 
 
-## 📌 How to use the component-template?
+* Reuse your components with the import statement
 
-1 Each component lies in its own svelte file
 
-2 Choose suitable Naming of your components 
-
-3 Reuse your components with import
-
-4 Pass props or use *each iterations* for the usage of dynamic data with your components
+* Pass *props* or use *each iterations* for the usage of dynamic data with your components
  
 ***
 

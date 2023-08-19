@@ -10,9 +10,9 @@
    <div class="mt-5 py-5 px-9 border">
       <div class="mt-2 flex space-x-2 items-center">
          <svg class="w-6 h-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M10.05 4.575a1.575 1.575 0 10-3.15 0v3m3.15-3v-1.5a1.575 1.575 0 013.15 0v1.5m-3.15 0l.075 5.925m3.075.75V4.575m0 0a1.575 1.575 0 013.15 0V15M6.9 7.575a1.575 1.575 0 10-3.15 0v8.175a6.75 6.75 0 006.75 6.75h2.018a5.25 5.25 0 003.712-1.538l1.732-1.732a5.25 5.25 0 001.538-3.712l.003-2.024a.668.668 0 01.198-.471 1.575 1.575 0 10-2.228-2.228 3.818 3.818 0 00-1.12 2.687M6.9 7.575V12m6.27 4.318A4.49 4.49 0 0116.35 15m.002 0h-.002" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
          </svg>
-         <h2 class="text-indigo-600 text-xl font-bold">What is a component-template?</h2>
+         <h2 class="text-indigo-600 text-xl font-bold">What is the component-template?</h2>
       </div>
       <div class="mt-2 py-2 px-5 text-gray-900">
          <p>The component-template delivers a <i>practical</i> and <i>structured</i> process of how to deal with your <b>components</b> in your <b>frontend</b>. </p>
@@ -55,6 +55,7 @@
          </div>
       </div>
 
+      <!-- Step 1 -->
       <div class="mt-10 flex space-x-2 items-center">
          <svg class="w-6 h-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75a4.5 4.5 0 01-4.884 4.484c-1.076-.091-2.264.071-2.95.904l-7.152 8.684a2.548 2.548 0 11-3.586-3.586l8.684-7.152c.833-.686.995-1.874.904-2.95a4.5 4.5 0 016.336-4.486l-3.276 3.276a3.004 3.004 0 002.25 2.25l3.276-3.276c.256.565.398 1.192.398 1.852z" />
@@ -63,17 +64,88 @@
          <h2 class="text-indigo-600 text-xl font-bold">How to install the component-template?</h2>
       </div>
       <div class="mt-2 py-2 px-5 text-gray-900">
-         <p>Download the project component-template from the <a href="/static" class="text-indigo-700 hover:underline">[npm Registry]</a>. (link?)</p>
+         <b>Step 1:</b>
+         <p>Download the project component-template from the <a href="https://www.npmjs.com/package/@cyberesli/component-template" class="text-indigo-700 hover:underline">[npm Registry]</a></p>
       </div>
       <div class="mt-2 rounded-md bg-gray-50 w-max p-5">
             <div class="ml-3">
                <div class="mt-2 text-sm text-gray-700">
-                     <p><b>$</b> npm i component-template</p>
+                     <p><b>$</b> npm i @cyberesli/component-template</p>
                </div>
             </div>
       </div>
-      <div class="mt-2 py-2 px-5 text-gray-900">
-         <p>Beneath the <i>lib</i> folder make a folder <b>component-template</b> that contains further folders with the Atomic Design categories. This listed structure is shown below. </p>
+
+      <!-- Step 2 -->
+      <div class="mt-5 py-2 px-5 text-gray-900">
+         <b>Step 2:</b>
+         <p>Move into the dist folder of the installed package component-template</p>
+      </div>
+      <div class="mt-2 rounded-md bg-gray-50 w-max p-5">
+         <div class="ml-3">
+            <div class="mt-2 text-sm text-gray-700">
+               <p><b>$</b> cd node_modules</p>
+               <p><b>$</b> @cyberesli</p>
+               <p><b>$</b> component-template</p>
+               <p><b>$</b> cd dist</p>
+            </div>
+         </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="mt-5 py-2 px-5 text-gray-900">
+         <b>Step 3:</b>
+         <p>Update the package component-template</p>
+      </div>
+      <div class="mt-2 rounded-md bg-gray-50 w-max p-5">
+         <div class="ml-3">
+            <div class="mt-2 text-sm text-gray-700">
+               <p><b>$</b> npm update</p>
+            </div>
+         </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="mt-5 py-2 px-5 text-gray-900">
+         <b>Step 4:</b>
+         <p>Run the script called <i>setup</i> in order to use functions of component-template</p>
+      </div>
+      <div class="mt-2 rounded-md bg-gray-50 w-max p-5">
+         <div class="ml-3">
+            <div class="mt-2 text-sm text-gray-700">
+               <p><b>$</b> npm run-script setup</p>
+            </div>
+         </div>
+      </div>
+
+      <!-- Step 5 -->
+      <div class="mt-5 py-2 px-5 text-gray-900">
+         <b>Step 5:</b>
+         <p>In your terminal go back to the root of your project and run it</p>
+      </div>
+      <div class="mt-2 rounded-md bg-gray-50 w-max p-5">
+         <div class="ml-3">
+            <div class="mt-2 text-sm text-gray-700">
+               <p><b>$</b> npm run dev</p>
+            </div>
+         </div>
+      </div>
+
+      <!-- Step 6 -->
+      <div class="mt-5 py-2 px-5 text-gray-900">
+         <b>Step 6:</b>
+         <p>Open your project locally in the browser and add /template see below for e.g</p>
+      </div>
+      <div class="mt-2 rounded-md bg-gray-50 w-max p-5">
+         <div class="ml-3">
+            <div class="mt-2 text-sm text-gray-700">
+               <p>localhost:5173/template</p>
+            </div>
+         </div>
+      </div>
+
+
+      <div class="mt-10 py-2 px-5 text-gray-900">
+         <p>In the <b>lib/component-template</b> folder add further folders with the Atomic Design categories. This listed structure is shown below. </p>
       </div>
 
       <div class="mt-2 rounded-md bg-gray-50 w-max p-5">
@@ -90,22 +162,7 @@
          </div>
       </div>
       <div class="mt-2 py-2 px-5 text-gray-900">
-         <p class="mb-2">Initial these folders are delivered. Still a quick check is needed. </p>
          <p>> In the <i>atoms</i> and <i>molecules</i> folder you can find example components. Follow this example and paste your <b>own components</b> into the <i>fitting</i> category of the <b>Atomic Design Methodology.</b></p>
-      </div>
-
-      <div class="mt-10 flex space-x-2 items-center">
-         <svg class="w-6 h-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-         </svg>
-
-
-         <h2 class="text-indigo-600 text-xl font-bold">How to open the component-template?</h2>
-      </div>
-      <div class="ml-3">
-         <div class="mt-2 text-gray-900 py-2 px-5">
-            Insert <code>/template</code> after your localhost address and see the Interface of the component-template
-         </div>
       </div>
 
       <div class="mt-10 flex space-x-2 items-center">
@@ -117,10 +174,12 @@
       </div>
       <div class="ml-3">
          <div class="mt-2 text-gray-900 py-2 px-5">
-               <p> <b>1</b> Each component lies in its own svelte file</p>
-               <p class="pt-2"> <b>2</b> Choose suitable Naming of your components</p>
-               <p class="pt-2"> <b>3</b> Reuse your components with the import statement</p>
-               <p class="pt-2"> <b>4</b> Pass props or use each iterations for the usage of dynamic data with your components</p>
+            <ul role="list" class="list-disc space-y-1 pl-5">
+               <li> Each component classified to Atomic Design lies in its own <i>.svelte</i> file.</li>
+               <li class="pt-2"> Choose suitable Naming of your components, so you will always know where they stand for.</li>
+               <li class="pt-2"> Reuse your components with the import statement</li>
+               <li class="pt-2"> Pass props or use each iterations for the usage of dynamic data with your components</li>
+            </ul>
          </div>
       </div>
 
