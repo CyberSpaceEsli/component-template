@@ -5,7 +5,7 @@
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
-		"setup": "cp -R src/lib/component-template ../../../../src/lib",
+		"setup": "mv src/lib/component-template ../../../../src/lib",
 		"preview": "vite preview",
 		"package": "svelte-kit sync && svelte-package && publint",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
