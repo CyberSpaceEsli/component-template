@@ -162,7 +162,7 @@
          </div>
       </div>
       <div class="mt-2 py-2 px-5 text-gray-900">
-         <p>> In the <i>atoms</i> and <i>molecules</i> folder you can find example components. Follow this example and paste your <b>own components</b> into the <i>fitting</i> category of the <b>Atomic Design Methodology.</b></p>
+         <p>> In the <i>atoms</i> and <i>molecules</i> folder you can find example components. You can delete them but follow there example and paste your <b>own components</b> into the <i>fitting</i> category of the <b>Atomic Design Methodology.</b></p>
       </div>
 
       <div class="mt-10 flex space-x-2 items-center">

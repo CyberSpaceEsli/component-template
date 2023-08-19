@@ -74,7 +74,7 @@ In the `lib/component-template` folder add further folders with the Atomic Desig
 *** pages
 ```
 
-In the *atoms* and *molecules* folder you can find example components. Follow this example and paste your **own components** into the *fitting* category of the **Atomic Design Methodology**.
+In the *atoms* and *molecules* folder you can find example components. You can delete them but follow there example and paste your **own components** into the *fitting* category of the **Atomic Design Methodology**.
 
 Side Note:
 - If u want to show dynamic content or no content then use **caption** that will fill the component with the Name of the component.
