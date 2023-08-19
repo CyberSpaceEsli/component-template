@@ -2,8 +2,8 @@
 /** @typedef {typeof __propDef.events}  ComponentLinkEvents */
 /** @typedef {typeof __propDef.slots}  ComponentLinkSlots */
 export default class ComponentLink extends SvelteComponentTyped<{
-    component: any;
     category: any;
+    component: any;
     activeComponent?: string | undefined;
 }, {
     [evt: string]: CustomEvent<any>;
@@ -15,8 +15,8 @@ export type ComponentLinkSlots = typeof __propDef.slots;
 import { SvelteComponentTyped } from "svelte";
 declare const __propDef: {
     props: {
-        component: any;
         category: any;
+        component: any;
         activeComponent?: string | undefined;
     };
     events: {
