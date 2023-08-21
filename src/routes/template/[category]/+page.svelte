@@ -13,4 +13,4 @@
 </script>
 
 
-<ComponentContainer componentPaths={componentPaths}/>
+<ComponentContainer componentPaths={componentPaths} category={data.category}/>

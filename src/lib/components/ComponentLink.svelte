@@ -8,7 +8,6 @@ export let activeComponent='';
 $: setLink = activeLink(activeComponent,component);
 
 function activeLink(activeComponent, subItem) {
-    //console.log("activeLink", activeComponent);
     if (activeComponent === component) {
         return "text-indigo-600 underline";
     }
@@ -16,6 +15,6 @@ function activeLink(activeComponent, subItem) {
 
 </script>
 
-<a href={generateLink(component, category)} class="{setLink} text-gray-700 hover:text-indigo-600 rounded-md hover:underline">
+<a href={generateLink(component, category)} class="{setLink} text-indigo-950 hover:text-indigo-600 rounded-md hover:underline">
     {component}
 </a>

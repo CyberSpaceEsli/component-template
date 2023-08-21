@@ -2,7 +2,7 @@
     import "./../../app.css";
 </script>
 
-<main class="py-10">
+<main>
 <slot />
 </main>
 

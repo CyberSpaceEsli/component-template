@@ -36,7 +36,7 @@
         </div>
 
         <div class="h-fit mt-2">
-            <button class="hover:border hover:border-indigo-600 hover:rounded-md" on:click={toggleComponents}>
+            <button class="hover:border hover:border-indigo-600 hover:rounded-md hidden lg:block" on:click={toggleComponents}>
                 <svg id="plus-small" class="w-6 h-6 items-end text-gray-500" class:hidden={showComponents} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
                 </svg>
@@ -48,12 +48,12 @@
     </div>
 
     {#if showComponents}
-    <div id="component-box" class:hidden={!showComponents} class="flex flex-col w-full pl-10">
-        <ul class="">
-            <li class="">
+    <div id="component-box" class:hidden={!showComponents} class="flex flex-col w-full pl-6">
+        <ul class="break-all">
+            <li class="text-sm">
                     {#each subItems as subItem}
                     <div>
-                        <span class="text-indigo-600">-</span>
+                        <span class="text-indigo-600 text-sm">-</span>
                         <ComponentLink component={subItem} category={nav.name} activeComponent={activeComponent}/>
                     </div>
                     {/each}
