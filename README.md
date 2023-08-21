@@ -10,6 +10,9 @@ The [`component-template`] delivers a *practical* and *structured* process of ho
 
 * It needs to follow the fix structure of the **Methodology Atomic Design**.
 
+
+* **After installing** component-template you can *modify* and *personalize* the interface and given functions specific for **your project**.
+
 ## 👍 Why use the component-template?
 * Maximaze the reuse of your established components and write less code
 
