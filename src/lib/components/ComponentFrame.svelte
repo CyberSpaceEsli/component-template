@@ -1,7 +1,6 @@
 <script>
     import { onMount } from 'svelte';
     import { afterUpdate } from 'svelte';
-    import {generateLink} from "./functions/link.js";
 
     export let componentPath ='';
     export let category;
