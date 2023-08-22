@@ -30,7 +30,7 @@
                <h3 class="text-sm font-semibold text-gray-900">Alert:</h3>
                <div class="mt-2 text-sm text-gray-700">
                   <ul role="list" class="list-disc space-y-1 pl-5">
-                     <li>Until now this component-template is only compatible with the technologies <b>Svelte</b> and <b>Tailwind CSS<b/>.</li>
+                     <li>Until now this component-template is only compatible with the technologies <b>Svelte</b> and <b>Tailwind CSS</b>.</li>
                      <li>It needs to follow the fix structure of the <b>Metholody Atomic Design</b>.</li>
                      <li><b>After installing</b> component-template you can <i>modify and personalize</i> the interface and given functions specific for <b>your project</b>.</li>
                   </ul>
